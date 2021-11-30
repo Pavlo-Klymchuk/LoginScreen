@@ -42,4 +42,8 @@ export const useStyles = makeStyles((theme) => ({
             display: 'none'
         }
     },
+    errors: {
+        color: 'red',
+        marginTop: '10px'
+    }
 }));

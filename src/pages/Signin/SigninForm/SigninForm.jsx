@@ -7,11 +7,11 @@ import { useStyles } from './styles';
 import ImgEmail from '../pictures/img-email.png';
 import ImgLock from '../pictures/img-lock.png';
 
-const requiredMessage = 'Обязательно';
+const requiredMessage = 'Necessarily';
 
 const SignupSchema = Yup.object().shape({
     email: Yup.string()
-        .email('Не верный email')
+        .email('Invalid email')
         .required(requiredMessage)
         .default(''),
     password: Yup.string()

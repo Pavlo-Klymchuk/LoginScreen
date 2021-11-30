@@ -12,6 +12,7 @@ const Signin = () => {
     const { userInfo } = useSelector(userLoginSelector);
     const history = useHistory();
     const classes = useStyles();
+    const { error } = useSelector(userLoginSelector);
 
     const redirect = () => {
         setTimeout(() => {
@@ -44,6 +45,7 @@ const Signin = () => {
                         <Grid item xs={12} sm={6} md={6} className={classes.mainLogin}>
                             <h2>Member Login</h2>
                             <SigninForm />
+                            {error && <Box className={classes.errors}>{error}</Box>}
                             <Box className={classes.forgotNamePassText}><span style={{ color: 'lightgray' }}>Forgot</span> Username/Password?</Box>
                             <Box className={classes.createAccountText}>Create your Account &rarr;</Box>
                         </Grid>
